@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "db:reset": "psql -f ./db/schema.sql",
+    "db:seed": "psql -f ./db/seed.sql"
   },
   "keywords": [],
   "author": "",
