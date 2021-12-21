@@ -6,8 +6,9 @@ const errorHandler = (error, _req, res, _next) => {
   });
 };
 
-const notFoundHandler = (req, _res, next) => {
-  if (req.payload) return next();
+const notFoundHandler = (req, res, next) => {
+  const isEmpty = !Object.keys(res.locals).length;
+  if (!isEmpty) return next();
 
   const error = `${req.method} ${req.path} is not a valid route.`;
   next({
