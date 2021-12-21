@@ -5,9 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js",
-    "db:reset": "psql -f ./db/schema.sql",
-    "db:seed": "psql -f ./db/seed.sql"
+    "dev": "NODE_ENV=development nodemon server.js",
+    "db:setup": "DB_COMMAND=setup node ./db/schema",
+    "db:reset": "DB_COMMAND=reset node ./db/schema",
+    "db:seed": "DB_COMMAND=seed node ./db/seeds",
+    "db:reseed": "DB_COMMAND=reseed node ./db/seeds",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -15,10 +18,8 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
+    "dotenv-expand": "^5.1.0",
     "express": "^4.17.1",
     "pg-promise": "^10.11.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
   }
 }
