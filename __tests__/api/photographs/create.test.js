@@ -1,6 +1,6 @@
 const request = require("supertest");
-const app = require("../../../app");
-const db = require("../../../db");
+const app = require("@root/app");
+const db = require("@db");
 const { closeConnection, resetDatabase } = require("../../helpers");
 
 beforeEach(resetDatabase);

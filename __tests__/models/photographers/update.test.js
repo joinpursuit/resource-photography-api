@@ -1,5 +1,5 @@
-const db = require("../../../db");
-const photographerModel = require("../../../models/photographers.model");
+const db = require("@db");
+const photographerModel = require("@models/photographers.model");
 const { closeConnection, resetDatabase } = require("../../helpers");
 
 beforeEach(resetDatabase);

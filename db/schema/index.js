@@ -1,5 +1,6 @@
-const db = require("../");
-const logger = require("../../utils/devLogger");
+require("module-alias/register");
+const db = require("@db");
+const logger = require("@utils/devLogger");
 const photographers = require("./photographers");
 const photographs = require("./photographs");
 

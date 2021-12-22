@@ -1,5 +1,5 @@
-const db = require("../../../db");
-const photographsModel = require("../../../models/photographs.model");
+const db = require("@db");
+const photographModel = require("@models/photographs.model");
 const { closeConnection, resetDatabase } = require("../../helpers");
 
 beforeEach(resetDatabase);
@@ -19,7 +19,7 @@ describe("Photographs model", () => {
         photographer_id: photographer.id,
       };
 
-      await photographsModel.create(photograph);
+      await photographModel.create(photograph);
 
       const afterCreate = await db.any("SELECT * FROM photographs");
       expect(afterCreate.length).toEqual(9);

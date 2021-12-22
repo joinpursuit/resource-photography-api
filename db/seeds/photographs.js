@@ -1,4 +1,4 @@
-const db = require("../");
+const db = require("@db");
 
 async function seedData() {
   const photographers = await db.any("SELECT * FROM photographers");

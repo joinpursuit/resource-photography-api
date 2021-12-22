@@ -1,4 +1,4 @@
-const photographerModel = require("../models/photographers.model");
+const photographerModel = require("@models/photographers.model");
 
 async function getAll(_req, res, next) {
   try {

@@ -1,4 +1,4 @@
-const db = require("../");
+const db = require("@db");
 
 function createTable() {
   return db.none(
