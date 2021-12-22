@@ -10,7 +10,8 @@
     "db:reset": "DB_COMMAND=reset node ./db/schema",
     "db:seed": "DB_COMMAND=seed node ./db/seeds",
     "db:reseed": "DB_COMMAND=reseed node ./db/seeds",
-    "test": "NODE_ENV=test jest --detectOpenHandles --testPathPattern \"__tests__/.*\\.test\\.js\""
+    "test": "NODE_ENV=test jest --testPathPattern \"__tests__/.*\\.test\\.js\"",
+    "test:watch": "NODE_ENV=test jest --runInBand --testPathPattern \"__tests__/.*\\.test\\.js\" --watchAll"
   },
   "keywords": [],
   "author": "",
