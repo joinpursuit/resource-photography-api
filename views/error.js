@@ -1,7 +1,7 @@
 const errorHandler = (error, _req, res, _next) => {
   const { status = 500, errors = ["Something went wrong."] } = error;
   res.status(status).send({
-    status,
+    success: false,
     errors,
   });
 };
