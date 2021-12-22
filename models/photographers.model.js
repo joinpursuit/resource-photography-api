@@ -77,7 +77,6 @@ async function destroy(id) {
 }
 
 module.exports = {
-  NAME: "Photographer",
   getAll,
   getOne,
   create,
